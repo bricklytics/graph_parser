@@ -1,0 +1,47 @@
+# ESPECIFICAÇÃO PARA LEITURA DE GRAFOS
+
+## FORMATO DO ARQUIVO DE ENTRADA
+
+1. ESTRUTURA GERAL:
+   - Linha única com o nome do grafo
+   - Vértices (um por linha)
+   - Arestas no formato: "vertice1 -- vertice2 [peso]"
+   - Comentários: linhas começando com "//" são ignoradas
+
+2. REGRAS DE FORMATO:
+   - Tamanho máximo por linha: 2047 caracteres
+   - Vértices são strings sem espaços ou "--"
+   - Pesos são inteiros não negativos (opcionais)
+   - Vértices usados em arestas não precisam ser declarados separadamente
+
+3. EXEMPLO:
+
+// Nome do grafo
+grafo_exemplo
+
+// Vértices
+a
+b
+c
+
+// Arestas
+a -- b 10
+b -- c
+c -- a 5
+
+// Vértice isolado
+d
+
+## COMPORTAMENTO DA FUNÇÃO
+
+- Lê o arquivo seguindo as especificações acima
+- Retorna estrutura de dados do grafo
+- Não faz validação de entrada
+- Comportamento indefinido para entradas malformadas
+
+## OBSERVAÇÕES
+
+- Ordem dos elementos é flexível
+- Espaços extras são ignorados
+- Nomes de vértices não podem conter "--"
+- Peso padrão é assumido quando não especificado
